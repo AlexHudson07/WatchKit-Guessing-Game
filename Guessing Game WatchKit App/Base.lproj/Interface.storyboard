@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6750" systemVersion="14C109" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6735"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Guessing_Game_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label width="1" alignment="left" text="Where is the worlds tallest church located" textAlignment="center" numberOfLines="0" id="z3a-FQ-Glz"/>
+                        <button width="1" alignment="left" title="Play the game!" id="ooB-nQ-Iiw">
+                            <connections>
+                                <action selector="onPlayButtonPressed" destination="AgC-eL-Hgc" id="0lM-f6-nn2"/>
+                                <segue destination="R9D-vg-GiV" kind="modal" id="j0l-L2-Z7B"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="theButton" destination="ooB-nQ-Iiw" id="bAs-La-I4x"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="378" y="641"/>
+        </scene>
+        <!--Second Interface Controller-->
+        <scene sceneID="NgC-UJ-xe4">
+            <objects>
+                <controller id="R9D-vg-GiV" customClass="SecondInterfaceController" customModule="Guessing_Game_WatchKit_Extension">
+                    <items>
+                        <label alignment="left" text="Hurry up!" id="k7L-xp-6Ot"/>
+                        <timer width="66" height="22" alignment="left" id="BYo-XN-Qyi"/>
+                        <label alignment="left" text="Clicks left:" id="rxx-zO-gp4"/>
+                        <button width="1" height="23" alignment="left" title="New York" id="buG-YU-Vjr">
+                            <connections>
+                                <action selector="onOtherButtonsPressed" destination="R9D-vg-GiV" id="czF-iW-SqB"/>
+                            </connections>
+                        </button>
+                        <button width="1" height="23" alignment="left" title="Ulm" id="jl0-s1-reM">
+                            <connections>
+                                <action selector="onUlmButtPressed" destination="R9D-vg-GiV" id="RXR-Hn-pvh"/>
+                            </connections>
+                        </button>
+                        <button width="1" height="23" alignment="left" title="London" id="jij-gq-8w8">
+                            <connections>
+                                <action selector="onOtherButtonsPressed" destination="R9D-vg-GiV" id="Mmr-oX-LxS"/>
+                            </connections>
+                        </button>
+                        <button width="1" height="23" alignment="left" title="New Delhi" id="gem-5z-m5U">
+                            <connections>
+                                <action selector="onOtherButtonsPressed" destination="R9D-vg-GiV" id="huG-rX-29x"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="clicksLeftLabel" destination="rxx-zO-gp4" id="u5K-YM-1bf"/>
+                        <outlet property="hurryUpLabel" destination="k7L-xp-6Ot" id="YBw-gj-H13"/>
+                        <outlet property="otherbutton1" destination="buG-YU-Vjr" id="D7k-5s-ip1"/>
+                        <outlet property="otherbutton2" destination="jij-gq-8w8" id="jEP-K3-Pf7"/>
+                        <outlet property="otherbutton3" destination="gem-5z-m5U" id="NfN-3Y-tDh"/>
+                        <outlet property="theTimer" destination="BYo-XN-Qyi" id="Q4n-7N-pwi"/>
+                        <outlet property="ulmButton" destination="jl0-s1-reM" id="jnj-nU-68T"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="575" y="648.5"/>
+        </scene>
+    </scenes>
+</document>
